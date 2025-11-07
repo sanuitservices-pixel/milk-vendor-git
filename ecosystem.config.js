@@ -2,7 +2,10 @@ module.exports = {
     apps: [
         {
             name: 'milk_vendor_api',
-            script: 'bin/www',
+            script: 'app.js',
+            instances: 1,
+            autorestart: true,
+            watch: true,
             env_production: {
                 NODE_ENV: 'production'
             },
@@ -12,7 +15,7 @@ module.exports = {
         "production": {
             "user": "ubuntu",
             "host": "56.155.114.153",
-            "ref": "origin/master",
+            "ref": "origin/main",
             "repo": "https://github.com/sanuitservices-pixel/milk-vendor-git.git",
             "path": "/home/ubuntu/milk_vendor_api",
             "pre-deploy": "echo 'This is executed before deployment'",
