@@ -17,7 +17,7 @@ module.exports = {
             "host": "56.155.114.153",
             "ref": "origin/main",
             "repo": "https://github.com/sanuitservices-pixel/milk-vendor-git.git",
-            "path": "/home/ubuntu/milk_vendor_api",
+            "path": "/home/ubuntu/deploy",
             "pre-deploy": "echo 'This is executed before deployment'",
             "post-deploy": "cp ../.env ./ && npm install && pm2 startOrRestart ecosystem.config.js --env production"
         }
